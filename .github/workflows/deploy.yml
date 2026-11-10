@@ -13,14 +13,29 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Le decimos a GitHub que todos los comandos se ejecuten dentro de tu subcarpeta
+    defaults:
+      run:
+        working-directory: ./landing-r4t
     steps:
-      - name: Checkout your repository using git
+      - name: Checkout del código
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses: withastro/action@v3
+        
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
         with:
-          path: ./landing-r4t
-          package-manager: npm
+          node-version: 20
+          
+      - name: Instalar dependencias
+        run: npm install
+        
+      - name: Construir el proyecto Astro
+        run: npm run build
+        
+      - name: Subir la carpeta pública (dist)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./landing-r4t/dist
 
   deploy:
     needs: build
@@ -29,6 +44,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Desplegar en GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
