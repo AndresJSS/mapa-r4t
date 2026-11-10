@@ -1,0 +1,101 @@
+[
+  {
+    "id": "prod-001",
+    "nombre_productor": "María Fernández",
+    "pais": "Colombia",
+    "region_representativa": "Magdalena",
+    "coordenadas": [10.4522, -74.1433],
+    "rubro": "Plátano",
+    "enfermedad": "Fusarium R4T",
+    "vimeo_id": "76979871",
+    "descripcion": "Experiencia en la implementación de pediluvios y control de acceso estricto a la finca."
+  },
+  {
+    "id": "prod-002",
+    "nombre_productor": "Carlos Rojas",
+    "pais": "Costa Rica",
+    "region_representativa": "Limón",
+    "coordenadas": [9.9913, -83.0415],
+    "rubro": "Banano",
+    "enfermedad": "Moko",
+    "vimeo_id": "824804225",
+    "descripcion": "Manejo y erradicación de plantas sintomáticas con herramientas desinfectadas."
+  },
+  {
+    "id": "prod-003",
+    "nombre_productor": "Juan Pérez",
+    "pais": "Ecuador",
+    "region_representativa": "Los Ríos",
+    "coordenadas": [-1.483, -79.533],
+    "rubro": "Banano",
+    "enfermedad": "Fusarium R4T",
+    "vimeo_id": "76979871",
+    "descripcion": "Establecimiento de arcos de desinfección vehicular y delimitación de zonas de exclusión."
+  },
+  {
+    "id": "prod-004",
+    "nombre_productor": "Luis Sánchez",
+    "pais": "Peru",
+    "region_representativa": "Piura",
+    "coordenadas": [-5.194, -80.632],
+    "rubro": "Banano Orgánico",
+    "enfermedad": "Fusarium R4T",
+    "vimeo_id": "824804225",
+    "descripcion": "Implementación de tapetes sanitarios y rotación temporal de cultivos."
+  },
+  {
+    "id": "prod-005",
+    "nombre_productor": "Carmen Rojas",
+    "pais": "Venezuela",
+    "region_representativa": "Aragua",
+    "coordenadas": [10.233, -67.583],
+    "rubro": "Plátano",
+    "enfermedad": "Fusarium R4T",
+    "vimeo_id": "76979871",
+    "descripcion": "Capacitación a trabajadores en el reconocimiento temprano de marchitez y síntomas visuales."
+  },
+  {
+    "id": "prod-006",
+    "nombre_productor": "Roberto Gómez",
+    "pais": "Panama",
+    "region_representativa": "Bocas del Toro",
+    "coordenadas": [9.333, -82.250],
+    "rubro": "Banano",
+    "enfermedad": "Fusarium R4T",
+    "vimeo_id": "824804225",
+    "descripcion": "Monitoreo satelital y uso de drones para vigilancia fitosanitaria de grandes extensiones."
+  },
+  {
+    "id": "prod-007",
+    "nombre_productor": "Ana Martínez",
+    "pais": "Honduras",
+    "region_representativa": "Atlántida",
+    "coordenadas": [15.650, -87.133],
+    "rubro": "Banano",
+    "enfermedad": "Sigatoka Negra",
+    "vimeo_id": "76979871",
+    "descripcion": "Manejo integrado con podas preventivas, deshoje quirúrgico y control de humedad."
+  },
+  {
+    "id": "prod-008",
+    "nombre_productor": "Diego López",
+    "pais": "Guatemala",
+    "region_representativa": "Escuintla",
+    "coordenadas": [14.300, -90.783],
+    "rubro": "Plátano",
+    "enfermedad": "Moko",
+    "vimeo_id": "824804225",
+    "descripcion": "Erradicación temprana de racimos y desinfección estricta de machetes con amonio cuaternario."
+  },
+  {
+    "id": "prod-009",
+    "nombre_productor": "Silvia Morales",
+    "pais": "Dominican Republic",
+    "region_representativa": "Valverde",
+    "coordenadas": [19.583, -71.100],
+    "rubro": "Banano Orgánico",
+    "enfermedad": "Sigatoka Negra",
+    "vimeo_id": "76979871",
+    "descripcion": "Uso de biopreparados y extractos botánicos para el fortalecimiento del sistema inmunológico de la planta."
+  }
+]

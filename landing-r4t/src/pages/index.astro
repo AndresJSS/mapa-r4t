@@ -1,0 +1,78 @@
+---
+import InteractiveMap from '../components/InteractiveMap.jsx';
+import '../styles/global.css';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prevención R4T | Mapa de Productores</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  </head>
+  
+  <!-- AJUSTE DASHBOARD: h-screen, flex y overflow-hidden obligan a la página a ocupar exactamente el 100% de la ventana sin scroll -->
+  <body class="bg-gray-100 text-gray-900 font-sans antialiased h-screen flex flex-col overflow-hidden">
+    
+    <!-- Encabezado Institucional -->
+    <!-- flex-none z-10 mantiene el header fijo en la parte superior -->
+    <header class="bg-[#003865] text-white py-3 px-4 shadow-md border-b-4 border-[#00284a] flex-none z-10">
+      <div class="w-full mx-auto flex items-center">
+        
+        <div class="flex items-center">
+          <img src="iica-logo.svg" alt="IICA" class="h-12 md:h-12 mr-3" />
+          
+          <span class="text-xl md:text-lg font-medium tracking-wide ml-3 border-l border-white/50 pl-4 opacity-95 hidden md:block whitespace-nowrap">
+            ALIANZA GLOBAL CONTRA EL FUSARIUM R4T
+          </span>
+        </div>
+        
+      </div>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <!-- flex-1 y flex-col permiten que el título quede arriba y el mapa absorba todo el espacio restante hacia abajo -->
+    <main class="flex-1 w-full p-3 md:p-4 flex flex-col overflow-hidden">
+      
+      <!-- Título que agregaste (flex-none para que no se aplaste) -->
+      <div class="mb-3 flex-none pl-2">
+        <h1 class="text-xl md:text-2xl font-bold text-[#003865] tracking-tight">
+          Experiencias en campo y medidas de bioseguridad en América Latina y el Caribe
+        </h1>
+      </div>
+
+      <!-- Contenedor del Mapa interactivo -->
+      <div class="flex-1 w-full relative">
+        <InteractiveMap client:only="react" />
+      </div>
+      
+      <!-- Texto de bioseguridad en la parte inferior -->
+      <div class="flex-none mt-2">
+        <p class="text-[11px] md:text-xs text-center text-gray-500">
+          * Por motivos de bioseguridad, las ubicaciones son representativas de la región y no corresponden a las coordenadas exactas de las fincas.
+        </p>
+      </div>
+    </main>
+
+    <!-- Reglas CSS Globales -->
+    <style is:global>
+      .leaflet-popup-content-wrapper {
+        border-radius: 0.75rem !important;
+      }
+      .leaflet-popup-content {
+        min-width: 300px !important;
+        margin: 16px !important;
+      }
+      @media (min-width: 640px) {
+        .leaflet-popup-content {
+          min-width: 450px !important;
+        }
+      }
+      /* Sombra para los botones nativos del mapa */
+      .leaflet-control-zoom {
+        border: none !important;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) !important;
+      }
+    </style>
+  </body>
+</html>
